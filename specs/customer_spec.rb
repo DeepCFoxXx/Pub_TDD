@@ -43,4 +43,9 @@ class CustomerTest < MiniTest::Test
     assert_equal(7.0, @customer.wallet)
   end
 
+  def test_customer_can_buy_drink__increases_drunkeness
+    @customer.buy_drink(@drink)
+    assert_equal(5.0, @customer.drunkenness)
+  end
+
 end
