@@ -62,4 +62,10 @@ class PubTest < MiniTest::Test
     assert_equal(105.0, @pub.till())
   end
 
+  def test_pub_checks_age__doesnt_serve_underage
+    @pub.serve(@customer2, @drink2)
+    assert_equal(15.0, @customer2.wallet())
+    assert_equal(100.0, @pub.till())
+  end
+
 end
