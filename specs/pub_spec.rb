@@ -32,4 +32,8 @@ class PubTest < MiniTest::Test
     assert_equal(true, @pub.customer_too_young?(@customer2))
   end
 
+  def test_customer_too_young__returns_false
+    assert_equal(false, @pub.customer_too_young?(@customer1))
+  end
+
 end
