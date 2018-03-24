@@ -8,6 +8,15 @@ class Pub
     @drinks = drinks
   end
 
+  def serve(customer, drink)
+    return if customer_too_young?(customer)
+    return if customer_too_drunk?(customer)
+    if @drinks === drinks
+      customer.buy_drink(drink)
+      @till += drink.price()
+    end
+  end
+
   def customer_too_young?(customer)
     return customer.age < 18
   end

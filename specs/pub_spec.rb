@@ -40,4 +40,14 @@ class PubTest < MiniTest::Test
     assert_equal(false, @pub.customer_too_drunk?(@customer1))
   end
 
+  def test_customer_too_drunk__returns_true
+    @pub.serve(@customer3, @drink2)
+    @pub.serve(@customer3, @drink2)
+    @pub.serve(@customer3, @drink2)
+    @pub.serve(@customer3, @drink2)
+    @pub.serve(@customer3, @drink2)
+    @pub.serve(@customer3, @drink2)
+    assert_equal(true, @pub.customer_too_drunk?(@customer3))
+  end
+
 end
