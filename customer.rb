@@ -13,4 +13,11 @@ class Customer
     return wallet >= item.price
   end
 
+  def buy_drink(drink)
+    if sufficient_funds?(drink)
+      @wallet -= drink.price
+      @drunkenness += drink.alcohol_level
+    end
+  end
+
 end

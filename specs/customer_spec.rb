@@ -29,4 +29,13 @@ class CustomerTest < MiniTest::Test
     assert_equal(true, @customer.sufficient_funds?(@drink))
   end
 
+  def test_sufficient_funds__false_if_not_enough
+    @customer.buy_drink(@drink)
+    @customer.buy_drink(@drink)
+    @customer.buy_drink(@drink)
+    @customer.buy_drink(@drink)
+    @customer.buy_drink(@drink)
+    assert_equal(false, @customer.sufficient_funds?(@drink))
+  end
+
 end
