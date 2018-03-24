@@ -24,4 +24,8 @@ class PubTest < MiniTest::Test
     assert_equal(100, @pub.till)
   end
 
+  def test_pub_has_drinks
+    assert_equal(2, @drinks.length)
+  end
+
 end
