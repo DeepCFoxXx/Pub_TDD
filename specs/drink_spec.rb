@@ -15,4 +15,8 @@ class DrinkTest < MiniTest::Test
     assert_equal(3.0, @drink.price)
   end
 
+  def test_drink_has_alochol_level
+    assert_equal(5, @drink.alcohol_level)
+  end
+
 end
