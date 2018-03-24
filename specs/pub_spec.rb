@@ -20,4 +20,8 @@ class PubTest < MiniTest::Test
     assert_equal("The Old Oak", @pub.name)
   end
 
+  def test_pub_has_till
+    assert_equal(100, @pub.till)
+  end
+
 end
