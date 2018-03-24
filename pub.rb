@@ -8,4 +8,8 @@ class Pub
     @drinks = drinks
   end
 
-end 
+  def customer_too_young?(customer)
+    return customer.age < 18
+  end
+
+end
