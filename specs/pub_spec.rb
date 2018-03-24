@@ -36,4 +36,8 @@ class PubTest < MiniTest::Test
     assert_equal(false, @pub.customer_too_young?(@customer1))
   end
 
+  def test_customer_too_drunk__returns_false
+    assert_equal(false, @pub.customer_too_drunk?(@customer1))
+  end
+
 end

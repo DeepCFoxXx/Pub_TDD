@@ -12,4 +12,8 @@ class Pub
     return customer.age < 18
   end
 
+  def customer_too_drunk?(customer)
+    return customer.drunkenness >= 50
+  end
+
 end
