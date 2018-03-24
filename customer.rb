@@ -9,4 +9,8 @@ class Customer
     @drunkenness = drunkenness
   end
 
+  def sufficient_funds?(item)
+    return wallet >= item.price
+  end
+
 end

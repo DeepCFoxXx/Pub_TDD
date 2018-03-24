@@ -25,4 +25,8 @@ class CustomerTest < MiniTest::Test
     assert_equal(0, @customer.drunkenness)
   end
 
+  def test_sufficient_funds__true_if_enough
+    assert_equal(true, @customer.sufficient_funds?(@drink))
+  end
+
 end
